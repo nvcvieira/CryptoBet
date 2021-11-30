@@ -81,93 +81,230 @@
   }
 }
 
+
+
   /* cards style */
-
-
- .container{
-     padding: 5px;
-     box-sizing: border-box;
-     color: #c4c3ca;
-     background-color: #1f2029;
-     overflow-x: hidden;
-
- } 
-
- .column{
-     float: left;
-     width: 20%;
-     padding: 0 10px;
-    
-
- }
-
-
-.row {
-    margin: 0 -5px;
-}
-
-.row:after{
-    content: "";
-  display: table;
-  clear: both;
-}
-
-
-
+  @import url('https://fonts.googleapis.com/css?family=Oswald');
+  .container {
+      margin: 20px;
+      padding: 20px;
+      border: 0;
+      box-sizing: border-box
+  }
+  
+  body {
+      background-color: #dadde6;
+      font-family: arial
+  }
+  
+  .fl-left {
+      float: left
+  }
+  
+  .fl-right {
+      float: right
+  }
+  
+  .container h1 {
+      text-transform: uppercase;
+      font-weight: 900;
+      border-left: 10px solid #fec500;
+      padding-left: 10px;
+      margin-bottom: 30px
+  }
+  
+  .row {
+      overflow: hidden
+  }
+  
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-   
-    
-    
+      display: table-row;
+      width: 49%;
+      background-color: #fff;
+      color: #989898;
+      margin-bottom: 10px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      border-radius: 4px;
+      position: relative
   }
   
-  .price {
-    color: grey;
-    font-size: 22px;
+  .card+.card {
+      margin-left: 2%
   }
   
-  .card button {
-    border: none;
-    outline: 0;
-    margin-top: 12px;
-    padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
+  .date {
+      display: table-cell;
+      width: 25%;
+      position: relative;
+      text-align: center;
+      border-right: 2px dashed #dadde6
   }
   
-  .card button:hover {
-    opacity: 0.7;
-}
-
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
+  .date:before,
+  .date:after {
+      content: "";
       display: block;
-      margin-bottom: 20px;
-    }
-}
+      width: 30px;
+      height: 30px;
+      background-color: #DADDE6;
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      z-index: 1;
+      border-radius: 50%
+  }
+  
+  .date:after {
+      top: auto;
+      bottom: -15px
+  }
+  
+  .date time {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%)
+  }
+  
+  .date time span {
+      display: block
+  }
+  
+  .date time span:first-child {
+      color: #2b2b2b;
+      font-weight: 600;
+      font-size: 250%
+  }
+  
+  .date time span:last-child {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: -10px
+  }
+  
+  .card-cont {
+      display: table-cell;
+      width: 75%;
+      font-size: 85%;
+      padding: 10px 10px 30px 50px
+  }
+  
+  .card-cont h3 {
+      color: #3C3C3C;
+      font-size: 130%
+  }
+  
+  .row:last-child .card:last-of-type .card-cont h3 {
+      text-decoration: line-through
+  }
+  
+  .card-cont>div {
+      display: table-row
+  }
+  
+  .card-cont .even-date i,
+  .card-cont .even-info i,
+  .card-cont .even-date time,
+  .card-cont .even-info p {
+      display: table-cell
+  }
+  
+  .card-cont .even-date i,
+  .card-cont .even-info i {
+      padding: 5% 5% 0 0
+  }
+  
+  .card-cont .even-info p {
+      padding: 30px 50px 0 0
+  }
+  
+  .card-cont .even-date time span {
+      display: block
+  }
+  
+  .card-cont a {
+      display: block;
+      text-decoration: none;
+      width: 80px;
+      height: 30px;
+      background-color: #D8DDE0;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 2px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px
+  }
+  
+  .row:last-child .card:first-child .card-cont a {
+      background-color: #037FDD
+  }
+  
+  .row:last-child .card:last-child .card-cont a {
+      background-color: #F8504C
+  }
+  
+  @media screen and (max-width: 860px) {
+      .card {
+          display: block;
+          float: none;
+          width: 100%;
+          margin-bottom: 10px
+      }
+      .card+.card {
+          margin-left: 0
+      }
+      .card-cont .even-date,
+      .card-cont .even-info {
+          font-size: 75%
+      }
+  }
+ 
+
 /* End of card style */
 
-.texto h1{
-    margin-top: 250px;
+
+
+
+
+
+
+
+
+.texto-up h1{
+    margin-top: 200px;
+    
 }
 
-.texto{
+
+.texto-up{
+  
     margin-bottom: 50px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
   text-align: center;
   background-color: #f1f1f1;
+}
+
+.texto-down h1{
+  margin-top: 50px;
+  
+}
+
+.texto-down{
+  
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+text-align: center;
+background-color: #f1f1f1;
 }
 
 .footer{
@@ -195,7 +332,7 @@
   text-decoration: none;
 }
 
-/* Add a hover effect if you want */
+/* Add a hover effect */
 .fa:hover {
   opacity: 0.7;
 }
@@ -204,6 +341,7 @@
 
 /* Facebook */
 .fa-facebook {
+  margin: 5px 5px;
   background: #3B5998;
   color: white;
   border-radius:  50%;
@@ -211,6 +349,7 @@
 
 /* Twitter */
 .fa-twitter {
+  margin: 5px 5px;
   background: #55ACEE;
   color: white;
   border-radius:  50%;

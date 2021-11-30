@@ -4,7 +4,9 @@
     padding:0;
     
 }
-
+.cor-de-fundo{
+  background-color:   rgb(162, 142, 235);
+}
 
 /* Create a sticky/fixed navbar */
 #navbar {
@@ -56,7 +58,7 @@
 
 /* Style the active/current link */
 #navbar a.active {
-  background-color: rgb(98, 63, 226);
+  background-color: rgb(162, 142, 235);
   color: white;
 }
 
@@ -126,7 +128,10 @@
       font-family: 'Oswald', sans-serif;
       text-transform: uppercase;
       border-radius: 4px;
-      position: relative
+      position: relative;
+      box-sizing: border-box;
+      box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+      
   }
   
   .card+.card {
@@ -147,7 +152,7 @@
       display: block;
       width: 30px;
       height: 30px;
-      background-color: #DADDE6;
+      background-color:   rgb(162, 142, 235);
       position: absolute;
       top: -15px;
       right: -15px;
@@ -289,7 +294,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color:   rgb(162, 142, 235);
 }
 
 .texto-down h1{
@@ -304,7 +309,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
 text-align: center;
-background-color: #f1f1f1;
+  background-color:   rgb(162, 142, 235);
 }
 
 .footer{

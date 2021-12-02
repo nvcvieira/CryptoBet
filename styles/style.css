@@ -5,7 +5,7 @@
     
 }
 .cor-de-fundo{
-  background-color:   rgb(162, 142, 235);
+  background-color: #3a3a3a;
 }
 
 /* Create a sticky/fixed navbar */
@@ -110,9 +110,10 @@
   .container h1 {
       text-transform: uppercase;
       font-weight: 900;
-      border-left: 10px solid #fec500;
+      border-left: 10px solid white;
       padding-left: 10px;
-      margin-bottom: 30px
+      margin-bottom: 30px;
+      color:white;
   }
   
   .row {
@@ -152,7 +153,8 @@
       display: block;
       width: 30px;
       height: 30px;
-      background-color:   rgb(162, 142, 235);
+      background-color: #3a3a3a;
+      
       position: absolute;
       top: -15px;
       right: -15px;
@@ -288,13 +290,13 @@
 
 
 .texto-up{
-  
+    color: black;
     margin-bottom: 50px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
-  text-align: center;
-  background-color:   rgb(162, 142, 235);
+    text-align: center;
+    background-color:   rgb(162, 142, 235);
 }
 
 .texto-down h1{
